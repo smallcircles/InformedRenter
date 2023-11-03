@@ -26,7 +26,7 @@ if($title || $text){ $block_header = true; }
 			<div class="image"><img src="<?php echo $image['url']; ?>" /></div>
 			<div class="cta-link">
 				<h2><?php echo $title; ?></h2>
-				<p><a href="<?php echo $link; ?>" class="<?php echo $link_type; ?>"><?php echo $link_text; ?></a></p>
+				<p><a href="<?php echo $link; ?>" class="<?php echo $link_type; ?> fancybox-inline"><?php echo $link_text; ?></a></p>
 			</div>
 		</div>
 

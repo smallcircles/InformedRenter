@@ -211,7 +211,7 @@ function acf_review_form_block() {
 
 add_action('acf/init', 'acf_review_form_block');
 
-
+/*
 function acf_review_map_block() {
 	
 	// check function exists
@@ -231,6 +231,7 @@ function acf_review_map_block() {
 
 add_action('acf/init', 'acf_review_map_block');
 
+*/
 
 add_action('acf/save_post', 'my_save_post');
 
@@ -277,3 +278,13 @@ function my_acf_google_map_api( $api ){
     return $api;
 }
 add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
+
+
+function add_slug_body_class( $classes ) {
+global $post;
+if ( isset( $post ) ) {
+$classes[] = $post->post_type . '-' . $post->post_name;
+}
+return $classes;
+}
+add_filter( 'body_class', 'add_slug_body_class' );

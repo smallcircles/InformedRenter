@@ -4,7 +4,7 @@
 
 
 
-h1 { font-size:50px; text-transform:uppercase;margin-bottom:0; }
+h1 { font-size:48px; text-transform:uppercase;margin-bottom:0; }
 h2 { font-size:42px; text-transform:uppercase; }
 h3 { font-size:36px; text-transform:uppercase; }
 h4 { font-size:24px; }
@@ -15,8 +15,44 @@ body{
 	font-family: 'Roboto', sans-serif !important;
 }
 #block-8,
-#wrapper-hero {display:none; }
 
+#wrapper-hero {display:none; }
+.wp-block-columns {
+    margin-bottom: 0;
+	gap:0;
+}
+
+.wp-block-column {
+    margin-bottom: 0;
+	gap:0;
+}
+
+.cols_2 > .wp-block-column { 
+	flex-basis: 50% !important; 
+	}
+.text_block {
+	.left_col { padding:50px 50px 50px 100px }
+	.right_col { padding:50px 100px 50px 50px }
+}
+.button a{
+	display: inline-block;
+	background: #fff;
+	border:2px solid #292929;
+	padding: 10px 25px;
+	color: #292929;
+	text-transform: uppercase;
+	text-decoration: none;
+	
+	&:hover {
+		background: #dadada;
+	}
+}
+
+.align-middle {
+	align-items: center;
+    display: flex;
+	gap: 0;
+}
 #wrapper-navbar {
 	height: 103px;
 	max-width: 1320px;
@@ -82,7 +118,7 @@ body{
 			}
 			li { 
 				display: inline-block; 
-				padding-right:40px;
+				padding-right:20px;
 				
 			
 				a { 
@@ -101,18 +137,22 @@ body{
 			.fa-square-facebook {
 				margin-left: 20px;
 			}
+			.fa-linkedin {
+				padding-right: 0px;
+			}
 			.fa-user-large {
-				display:none;
+				display:none !important;
 			}
 
 		.wp-block-column:nth-child(1) { 		
 			figure {margin:0; }
-			figcaption { display:none; }
+			figcaption { display:none !important; }
 		}
 		
 		.wp-block-column:nth-child(2) { flex-grow:7; }
 	}
 	.logo img { margin:0; }
+	#menu-main { text-align:right; }
 }
 #wrapper-footer {
 	.row {
@@ -195,10 +235,6 @@ block
 			margin: 0 auto;
 		}
 	}
-
-
-
-
 }
 
 /* ######  HERO BLOCK ######  */
@@ -286,9 +322,10 @@ block
 			flex-wrap: wrap;
 			
 			.props-item { 
-				flex-basis: 50%; 			
-				&:nth-of-type(even){	padding: 0 200px 0 150px;	}
-				&:nth-of-type(odd){		padding: 0 150px 0 200px;	}
+				flex-basis: 50%; 
+				text-align:justify;
+				&:nth-of-type(even){	padding: 0 180px 0 150px;	}
+				&:nth-of-type(odd){		padding: 0 150px 0 180px;	}
 			}
 		}
 	}
@@ -324,7 +361,6 @@ block
 		color:#ffffff;
 		display: flex;
 		flex-direction: row;
-		flex-wrap: wrap;
 		align-items: center;  
 		
 		.image {
@@ -336,9 +372,13 @@ block
 			display: flex;
 			margin-top: -30px;
 			
+			
 			img {
 				margin: auto;
 				display: block;
+				object-fit:cover;
+				width: 100%;	
+				height: 100%;
 			}
 		}
 		.cta-link {
@@ -490,5 +530,99 @@ block
 			text-transform: uppercase;
 			color: #fff;
 		}
+	}
+}
+
+
+
+/*  ABOUT US */
+
+.page-about-us {
+
+	#our-services {
+		h2 { 
+			text-align:center; 
+			font-size:36px;
+		}
+		h4 { text-align:left;}
+	
+	}
+	.team_bios {
+		gap: 0 !important; 
+		margin:0; 
+
+		&.text_left .bio .wp-block-columns {	padding: 0px 50px 0px 100px; }
+		&.text_right .bio .wp-block-columns {	padding: 0px 100px 0px 50px; }
+
+		.bio {   
+			
+			display: flex;
+			align-items: center;
+			
+			.wp-block-columns { margin-bottom:0; }
+		}
+		
+		
+		.photo {
+			aspect-ratio: 1 /1;
+			background: #f2f2f2;
+			
+			figure { 
+				margin: 0;
+				height: 100%;
+				padding: 70px;	
+				
+				img {
+					min-width: 100%;
+					min-height: 100%;
+					object-fit: cover;
+					border-radius: 50%;
+				}
+			}
+		}
+	}
+}
+
+
+
+/*  ### FancyBox ### */
+
+#fancybox-content {
+	.wp-block-columns {
+		gap: 0;
+		margin:0;
+	}
+	.photo {
+			figure { 
+				margin: 0;
+				height: 100%;
+				padding: 70px;	
+				
+				img {
+					aspect-ratio: 1 / 1;
+					object-fit: cover;
+					border-radius: 50%;
+				}
+			}
+	
+	}
+	.bio {
+		display:block;
+		    padding: 50px;
+	} 
+
+}
+
+
+/* PLANE TEXT PAGE */
+
+.page-template-fullwidthtextpage {
+
+	header.entry-header {
+		padding: 100px 100px 50px 100px;
+		margin:0;
+	}
+	.entry-content {
+		padding:0px 100px; 
 	}
 }

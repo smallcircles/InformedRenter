@@ -14966,7 +14966,7 @@ figure.woocommerce-product-gallery__wrapper {
 }
 
 h1, .h1 {
-  font-size: 50px;
+  font-size: 48px;
   text-transform: uppercase;
   margin-bottom: 0;
 }
@@ -14996,6 +14996,46 @@ body {
 #block-8,
 #wrapper-hero {
   display: none;
+}
+
+.wp-block-columns {
+  margin-bottom: 0;
+  gap: 0;
+}
+
+.wp-block-column {
+  margin-bottom: 0;
+  gap: 0;
+}
+
+.cols_2 > .wp-block-column {
+  flex-basis: 50% !important;
+}
+
+.text_block .left_col {
+  padding: 50px 50px 50px 100px;
+}
+.text_block .right_col {
+  padding: 50px 100px 50px 50px;
+}
+
+.button a {
+  display: inline-block;
+  background: #fff;
+  border: 2px solid #292929;
+  padding: 10px 25px;
+  color: #292929;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.button a:hover {
+  background: #dadada;
+}
+
+.align-middle {
+  align-items: center;
+  display: flex;
+  gap: 0;
 }
 
 #wrapper-navbar {
@@ -15055,7 +15095,7 @@ body {
 }
 #wrapper-footer-full .wp-block-columns .wp-block-column li {
   display: inline-block;
-  padding-right: 40px;
+  padding-right: 20px;
 }
 #wrapper-footer-full .wp-block-columns .wp-block-column li a {
   font-size: 14px;
@@ -15070,20 +15110,26 @@ body {
 #wrapper-footer-full .wp-block-columns .fa-square-facebook {
   margin-left: 20px;
 }
+#wrapper-footer-full .wp-block-columns .fa-linkedin {
+  padding-right: 0px;
+}
 #wrapper-footer-full .wp-block-columns .fa-user-large {
-  display: none;
+  display: none !important;
 }
 #wrapper-footer-full .wp-block-columns .wp-block-column:nth-child(1) figure {
   margin: 0;
 }
 #wrapper-footer-full .wp-block-columns .wp-block-column:nth-child(1) figcaption {
-  display: none;
+  display: none !important;
 }
 #wrapper-footer-full .wp-block-columns .wp-block-column:nth-child(2) {
   flex-grow: 7;
 }
 #wrapper-footer-full .logo img {
   margin: 0;
+}
+#wrapper-footer-full #menu-main {
+  text-align: right;
 }
 
 #wrapper-footer .row {
@@ -15257,12 +15303,13 @@ block
 }
 .props.cols_2 .content .props-item {
   flex-basis: 50%;
+  text-align: justify;
 }
 .props.cols_2 .content .props-item:nth-of-type(even) {
-  padding: 0 200px 0 150px;
+  padding: 0 180px 0 150px;
 }
 .props.cols_2 .content .props-item:nth-of-type(odd) {
-  padding: 0 150px 0 200px;
+  padding: 0 150px 0 180px;
 }
 .props.cols_3::before {
   display: none;
@@ -15296,7 +15343,6 @@ block
   color: #ffffff;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   align-items: center;
 }
 .cta.dark .wrapper .content .image {
@@ -15311,6 +15357,10 @@ block
 .cta.dark .wrapper .content .image img {
   margin: auto;
   display: block;
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 .cta.dark .wrapper .content .cta-link {
   margin-left: 100px;
@@ -15438,6 +15488,78 @@ block
   border-radius: 3px;
   text-transform: uppercase;
   color: #fff;
+}
+
+/*  ABOUT US */
+.page-about-us #our-services h2, .page-about-us #our-services .h2 {
+  text-align: center;
+  font-size: 36px;
+}
+.page-about-us #our-services h4, .page-about-us #our-services .h4 {
+  text-align: left;
+}
+.page-about-us .team_bios {
+  gap: 0 !important;
+  margin: 0;
+}
+.page-about-us .team_bios.text_left .bio .wp-block-columns {
+  padding: 0px 50px 0px 100px;
+}
+.page-about-us .team_bios.text_right .bio .wp-block-columns {
+  padding: 0px 100px 0px 50px;
+}
+.page-about-us .team_bios .bio {
+  display: flex;
+  align-items: center;
+}
+.page-about-us .team_bios .bio .wp-block-columns {
+  margin-bottom: 0;
+}
+.page-about-us .team_bios .photo {
+  aspect-ratio: 1/1;
+  background: #f2f2f2;
+}
+.page-about-us .team_bios .photo figure {
+  margin: 0;
+  height: 100%;
+  padding: 70px;
+}
+.page-about-us .team_bios .photo figure img {
+  min-width: 100%;
+  min-height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/*  ### FancyBox ### */
+#fancybox-content .wp-block-columns {
+  gap: 0;
+  margin: 0;
+}
+#fancybox-content .photo figure {
+  margin: 0;
+  height: 100%;
+  padding: 70px;
+}
+#fancybox-content .photo figure img {
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 50%;
+}
+#fancybox-content .bio {
+  display: block;
+  padding: 50px;
+}
+
+/* PLANE TEXT PAGE */
+.page-template-fullwidthtextpage header.entry-header {
+  padding: 100px 100px 50px 100px;
+  margin: 0;
+}
+.page-template-fullwidthtextpage .entry-content {
+  padding: 0px 100px;
 }
 
 .has-blue-color,
